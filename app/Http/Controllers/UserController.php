@@ -31,7 +31,7 @@ class UserController extends Controller
         ]);
         $user->save();
 
-        return redirect()->route('login')->with('success', 'Registration success. Please login!');
+        return redirect()->route('home')->with('success', 'Registration success. Please login!');
     }
 
 
