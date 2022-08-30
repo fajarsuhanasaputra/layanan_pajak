@@ -108,29 +108,158 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/landing/img/s.jpg" class="img-fluid" alt="">
+            <img src="assets/landing/img/hero-bg.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>VISI & MISI.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              VISI.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> Terwujudnya peningkatan pengelolaan pendapatan asli daerah yang professional.</li>
             </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            <p class="fst-italic">
+              MISI.
             </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Meningkatkan kualitas pengelolaan pendapatan daerah.</li>
+              <li><i class="bi bi-check-circle"></i> Meningkatkan kualitas pelayanan pajak daerah.</li>
+            </ul>
 
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
+  <!-- ======= Why Us Section ======= -->
+  <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
 
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Fungsi Bapenda?</h3>
+              <p>
+                <ul>
+                    <!-- create word font big -->
+                    <li><b> Penyusunan kebijakan teknis lingkup pengelolaan pendapatan daerah.</b></li>
+                    <li><b> Pelaksanaan tugas dukungan teknis lingkup pengelolaan pendapatan daerah.</b></li>
+                    <li><b> Pemantauan, evaluasi dan pelaporan pelaksanaan tugas dukungan teknis lingkup pengelolaan pendapatan daerah.</b></li>
+                    <li><b> Pembinaan teknis penyelenggaraan fungsi - fungsi penunjang urusan Pemerintahan Daerah lingkup pengelolaan pendapatan daerah.</b></li>
+                    <li><b> Pelaksanaan fungsi lain yang diberikan Walikota sesuai dengan tugas dan fungsinya.</b></li>
+                </ul>
+              </p>
+              <div class="text-center">
+                <a href="about.html" class="more-btn">Pelajari Lebih Lanjut <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-building"></i>
+                    <h4>Pajak Bumi dan Bangunan (PBB)</h4>
+                    <p>Pajak atas bumi dan/atau bangunan yang dimiliki dan dikuasai.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-house-door"></i>
+                    <h4>Pajak Hotel</h4>
+                    <p>Hotel adalah fasilitas penyedia jasa penginapan / peristirahatan.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-p-circle"></i>
+                    <h4>Pajak Parkir</h4>
+                    <p>Pajak atas penyelenggaraan tempat parkir di luar badan jalan.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-emoji-smile"></i>
+                    <h4>Pajak Hiburan</h4>
+                    <p>Pajak atas penyelenggaraan hiburan.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-lightbulb"></i>
+                    <h4>Pajak Penerangan</h4>
+                    <p>Pajak atas penggunaan tenaga listrik.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-cup-hot"></i>
+                    <h4>Pajak Restoran</h4>
+                    <p>Restoran adalah fasilitas penyedian makanan dan/atau minuman dengan dipungut bayaran</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+     <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3>Bapenda Kota Bandung</h3>
+        <p>
+        Jalan Wastukencana No 2,<br>
+        Babakan Ciamis, Kecamatan Sumur Bandung<br>
+        Kota Bandung<br><br>
+          <strong>Phone:</strong> +62 5861023849<br>
+          <strong>Email:</strong> bapenda@gmail.com<br>
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-links">
+        <h4>Tautan</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Layanan</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container d-md-flex py-4">
+
+  <div class="me-md-auto text-center text-md-start">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+  <div class="social-links text-center text-md-right pt-3 pt-md-0">
+    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  </div>
+</div>
+</footer><!-- End Footer -->
   <main id="main">
         
         <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
