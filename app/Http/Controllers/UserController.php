@@ -9,17 +9,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function register()
-    {
-        $data['title'] = 'Register';
-        return view('user/register', $data);
-    }
-
     public function register_action(Request $request)
     {
         $request->validate([
             'name' => 'required',
-            'username' => 'required|unique:tb_user',
+            'username' => 'required|unique:users',
             'password' => 'required',
             'password_confirm' => 'required|same:password',
         ]);
@@ -27,18 +21,12 @@ class UserController extends Controller
         $user = new User([
             'name' => $request->name,
             'username' => $request->username,
+            'role' => "user",
             'password' => Hash::make($request->password),
         ]);
         $user->save();
 
         return redirect()->route('home')->with('success', 'Registration success. Please login!');
-    }
-
-
-    public function login()
-    {
-        $data['title'] = 'Login';
-        return view('user/login', $data);
     }
 
     public function login_action(Request $request)
@@ -47,9 +35,10 @@ class UserController extends Controller
             'username' => 'required',
             'password' => 'required',
         ]);
-        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
-            $request->session()->regenerate();
-            return redirect()->intended('/');
+        $credentials = $request->only('username', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('dashboard')
+                        ->withSuccess('Logged-in');
         }
 
         return back()->withErrors([
@@ -82,5 +71,15 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
+    }
+
+    public function dashboard()
+    {
+        if(Auth::check())
+        {
+            return view('dashboard.index');
+        }
+
+        return redirect("/")->withSuccess('Access is not permitted');
     }
 }

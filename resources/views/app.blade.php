@@ -41,9 +41,12 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
 
+            @if(Auth::check())
+            <a href="{{route('dashboard')}}" class="btn get-started-btn ms-5">Dashboard</a>
+            @else
             <button type="button" class="btn get-started-btn ms-5" data-bs-toggle="modal" data-bs-target="#register">Daftar</button>
             <button style="border-radius: 20px;" class="btn btn-outline-secondary ms-3" data-bs-toggle="modal" data-bs-target="#login">Masuk</button>
-
+            @endif
             </div>
         </header>
         <main>
@@ -98,7 +101,9 @@
                 <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
                 <h1>BPPD,<br>Layanan Pajak</h1>
                 <h2>Kota Bandung</h2>
+                @if(!Auth::check())
                 <a class="btn-get-started" data-bs-toggle="modal" data-bs-target="#login">Bayar Sekarang !!!</a>
+                @endif
                                 </div>
             </section><!-- End Hero -->
                 <!-- ======= About Section ======= -->
@@ -289,7 +294,7 @@
                             <input class="form-control" type="password" name="password" />
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
                         </div>
                     </form>
                 </div>
