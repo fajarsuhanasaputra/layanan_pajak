@@ -114,4 +114,12 @@ class UserController extends Controller
 
         return back()->with('fail', 'Profil gagal diperbaharui!');
     }
+
+    public function riwayat_pajak()
+    {
+        if(Auth::check())
+        {
+            return view('dashboard.history_pajak');
+        }
+    }
 }

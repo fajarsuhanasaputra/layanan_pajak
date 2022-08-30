@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Dashboard Layanan Pajak Kota Bandung</a>
+                <a class="navbar-brand" href="/">Dashboard Layanan Pajak Kota Bandung</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -63,7 +63,7 @@
                             <a href="{{url('profile/'.Auth::user()->id)}}"><i class="fa fa-solid fa-user"></i> Profile</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-solid fa-book"></i> Riwayat Pajak</a>
+                            <a href="{{url('riwayat-pajak/'.Auth::user()->id)}}"><i class="fa fa-solid fa-book"></i> Riwayat Pajak</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-solid fa-credit-card"></i> Pembayaran</a>
