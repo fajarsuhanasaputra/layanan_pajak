@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <div class="container">
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
 
@@ -40,7 +39,7 @@
                 <li><a href="#">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+            </nav>
 
             <button type="button" class="btn get-started-btn ms-5" data-bs-toggle="modal" data-bs-target="#register">Daftar</button>
             <button style="border-radius: 20px;" class="btn btn-outline-secondary ms-3" data-bs-toggle="modal" data-bs-target="#login">Masuk</button>
@@ -300,7 +299,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
