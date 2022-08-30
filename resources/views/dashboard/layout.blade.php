@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+    <title>Dashboard Layanan Pajak</title>
 
     <!-- Core CSS - Include with every page -->
     <link href="{{asset('assets/admin/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -44,7 +44,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="{{route('logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -57,16 +57,16 @@
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{route('dashboard')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Profile</a>
+                            <a href="{{url('profile/'.Auth::user()->id)}}"><i class="fa fa-solid fa-user"></i> Profile</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Riwayat Pajak</a>
+                            <a href="#"><i class="fa fa-solid fa-book"></i> Riwayat Pajak</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Pembayaran</a>
+                            <a href="#"><i class="fa fa-solid fa-credit-card"></i> Pembayaran</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
@@ -77,11 +77,6 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
-            </div>
             @yield('content')
         </div>
         <!-- /#page-wrapper -->

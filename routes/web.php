@@ -25,3 +25,5 @@ Route::post('password', [UserController::class, 'password_action'])->name('passw
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+Route::get('profile/{user_id}', [UserController::class, 'profile'])->name('profile');
+Route::put('profile/{user_id}', [UserController::class, 'profile_update'])->name('profile.update');

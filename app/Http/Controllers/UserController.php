@@ -82,4 +82,36 @@ class UserController extends Controller
 
         return redirect("/")->withSuccess('Access is not permitted');
     }
+
+    public function profile(Request $request, $user_id)
+    {
+        if(Auth::check())
+        {
+            $user = User::find($user_id);
+            return view('dashboard.profile', ['user' => $user]);
+        }
+
+        return redirect("/")->withSuccess('Access is not permitted');
+    }
+
+    public function profile_update(Request $request, $user_id)
+    {
+        $user = User::find($user_id);
+        if($user)
+        {
+            if($request->input('name'))
+            {
+                $user->name = $request->input('name');
+            }
+    
+            if($request->input('username'))
+            {
+                $user->username = $request->input('username');
+            }
+            $user->save();
+            return redirect('dashboard')->with('success', 'Profil berhasil diperbaharui!');
+        }
+
+        return back()->with('fail', 'Profil gagal diperbaharui!');
+    }
 }
