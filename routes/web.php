@@ -35,10 +35,15 @@ Route::post('pembayaran/{user_id}', [UserController::class, 'pembayaran_add'])->
 //dashboard view
 Route::get('dashboard', [UserController::class, 'dashboardView'])->name('dashboard');
 
-//landing page
+//about
 Route::get('about', function () {
     return view('about', ['title' => 'tentang']);
 })->name('about');
+//layanan
 Route::get('layanan', function () {
     return view('layanan', ['title' => 'layanan']);
 })->name('layanan');
+//contact
+Route::get('contact', function () {
+    return view('contact', ['title' => 'contact']);
+})->name('contact');

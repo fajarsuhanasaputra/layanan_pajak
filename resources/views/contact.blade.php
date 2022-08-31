@@ -34,9 +34,9 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="/">Beranda</a></li>
-                    <li><a class="active" href="/about">Tentang</a></li>
-                    <li><a href="layanan">Layanan</a></li>
-                    <li><a href="/contact">Kontak</a></li>
+                    <li><a href="/about">Tentang</a></li>
+                    <li><a href="/layanan">Layanan</a></li>
+                    <li><a class="active" href="/contact">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -101,83 +101,86 @@
         <!-- ======= Breadcrumbs ======= -->
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
-                <h2>Tentang Kami</h2>
-                <p>Sektor pajak daerah merupakan sumber pendapatan utama bagi Pemerintah Kota Bandung, dengan memberikan kontribusi sepertiga dari total pendapatan daerah. Ini merupakan tugas utama dari dibentuknya Badan Pendapatan Daerah, berharap adanya peningkatan kesadaran dan kepatuhan wajib pajak dalam membayar pajak daerah serta meningkatnya pengawasan atas pelaksanaan sistem perpajakan di Kota Bandung. </p>
+                <h2>Layanan Kami</h2>
+                <p>Layanan yang bisa kami berikan adalah pembayaran pajak PBB, BPTHB, Pajak Hotel, Pajak Restoran, Pajak Parkir, Pajak Hiburan, Pajak Penerangan, Pajak Reklame, Pajak Air Tanah dll. </p>
             </div>
         </div><!-- End Breadcrumbs -->
-
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row">
-                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="assets/landing/img/bdg.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                        <h3>VISI & MISI.</h3>
-                        <p class="fst-italic">
-                        <h2>VISI.</h2>
-                        </p>
-                        <ul>
-                            <li>
-                                <h4><i class="bi bi-check-circle"></i>
-                                    Terwujudnya peningkatan pengelolaan pendapatan asli daerah yang professional.</h4>
-                            </li>
-                        </ul>
-                        <p class="fst-italic">
-                        <h2>MISI</h2>
-                        </p>
-                        <ul>
-                            <li>
-                                <h4><i class="bi bi-check-circle"></i>
-                                    Meningkatkan kualitas pengelolaan pendapatan daerah.</h4>
-                            </li>
-                            <li>
-                                <h4><i class="bi bi-check-circle"></i>
-                                    Meningkatkan kualitas pelayanan pajak daerah.</h4>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-        <section id="why-us" class="why-us">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row">
-                    <div class="col-lg-20 d-flex align-items">
-                        <div class="content justify">
-                            <h3 class="text-center">Fungsi Bapenda?</h3>
-                            <ul>
-                                <!-- create word font big -->
-                                <li><b>
-                                        <h4> Penyusunan kebijakan teknis lingkup pengelolaan pendapatan daerah.</h4>
-                                    </b></li>
-                                <li><b>
-                                        <h4>Pelaksanaan tugas dukungan teknis lingkup pengelolaan pendapatan daerah.<h4>
-                                    </b></li>
-                                <li><b>
-                                        <h4>Pemantauan, evaluasi dan pelaporan pelaksanaan tugas dukungan teknis lingkup pengelolaan pendapatan daerah.<h4>
-                                    </b></li>
-                                <li><b>
-                                        <h4>Pembinaan teknis penyelenggaraan fungsi - fungsi penunjang urusan Pemerintahan Daerah lingkup pengelolaan pendapatan daerah.<h4>
-                                    </b></li>
-                                <li><b>
-                                        <h4> Pelaksanaan fungsi lain yang diberikan Walikota sesuai dengan tugas dan fungsinya.<h4>
-                                    </b></li>
-                            </ul>
-                            </p>
+    </main><!-- End #main -->
+    <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+            <div class="col-lg-25 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-building"></i>
+                                <h4>Pajak Bumi dan Bangunan</h4>
+                                <p>Pajak atas bumi dan/atau bangunan yang dimiliki dan dikuasai.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-house-door"></i>
+                                <h4>Pajak Hotel</h4>
+                                <p>Hotel adalah fasilitas penyedia jasa penginapan / peristirahatan.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-p-circle"></i>
+                                <h4>Pajak Parkir</h4>
+                                <p>Pajak atas penyelenggaraan tempat parkir di luar badan jalan.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-emoji-smile"></i>
+                                <h4>Pajak Hiburan</h4>
+                                <p>Pajak atas penyelenggaraan hiburan.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-lightbulb"></i>
+                                <h4>Pajak Penerangan</h4>
+                                <p>Pajak atas penggunaan tenaga listrik.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-cup-hot"></i>
+                                <h4>Pajak Restoran</h4>
+                                <p>Restoran adalah fasilitas penyedian makanan dan/atau minuman dengan dipungut bayaran</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-columns"></i>
+                                <h4>BPTHB</h4>
+                                <p>Bea Perolehan Hak atas Tanah dan Bangunan adalah perbuatan atau peristiwa hukum</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-back"></i>
+                                <h4>Pajak Reklame</h4>
+                                <p>Pajak atas penyelenggaraan Reklame</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bi bi-droplet"></i>
+                                <h4>Pajak Air Tanah</h4>
+                                <p>Pajak atas pengambilan dan / atau pemanfaatan air</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </div><!-- End .content-->
             </div>
-        </section><!-- End Why Us Section -->
+        </div>
 
-    </main><!-- End #main -->
-
+        </div>
+    </section><!-- End Why Us Section -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
 

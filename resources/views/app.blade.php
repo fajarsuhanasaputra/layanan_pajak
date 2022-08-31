@@ -36,7 +36,7 @@
           <li><a class="active" href="#">Beranda</a></li>
           <li><a href="/about">Tentang</a></li>
           <li><a href="/layanan">Layanan</a></li>
-          <li><a href="#">Kontak</a></li>
+          <li><a href="/contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -183,7 +183,7 @@
               <div class="col-xl-4 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0">
                   <i class="bi bi-building"></i>
-                  <h4>Pajak Bumi dan Bangunan (PBB)</h4>
+                  <h4>PBB</h4>
                   <p>Pajak atas bumi dan/atau bangunan yang dimiliki dan dikuasai.</p>
                 </div>
               </div>
@@ -253,7 +253,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about">Tentang</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="layanan">Layanan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Kontak</a></li>
             </ul>
           </div>
         </div>
