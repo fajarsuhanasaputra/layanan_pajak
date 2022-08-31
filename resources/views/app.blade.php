@@ -35,7 +35,7 @@
         <ul>
           <li><a class="active" href="#">Beranda</a></li>
           <li><a href="/about">Tentang</a></li>
-          <li><a href="#">Layanan</a></li>
+          <li><a href="/layanan">Layanan</a></li>
           <li><a href="#">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -252,7 +252,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about">Tentang</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Layanan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="layanan">Layanan</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
             </ul>
           </div>

@@ -34,8 +34,8 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="/">Beranda</a></li>
-                    <li><a class="active" href="/about">Tentang</a></li>
-                    <li><a href="layanan">Layanan</a></li>
+                    <li><a href="/about">Tentang</a></li>
+                    <li><a class="active" href="/layanan">Layanan</a></li>
                     <li><a href="#">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -101,8 +101,8 @@
         <!-- ======= Breadcrumbs ======= -->
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
-                <h2>Tentang Kami</h2>
-                <p>Sektor pajak daerah merupakan sumber pendapatan utama bagi Pemerintah Kota Bandung, dengan memberikan kontribusi sepertiga dari total pendapatan daerah. Ini merupakan tugas utama dari dibentuknya Badan Pendapatan Daerah, berharap adanya peningkatan kesadaran dan kepatuhan wajib pajak dalam membayar pajak daerah serta meningkatnya pengawasan atas pelaksanaan sistem perpajakan di Kota Bandung. </p>
+                <h2>Layanan Kami</h2>
+                <p>Layanan yang bisa kami berikan adalah pembayaran pajak PBB, BPTHB, Pajak Hotel, Pajak Restoran, Pajak Parkir, Pajak Hiburan, Pajak Penerangan, Pajak Reklame, Pajak Air Tanah dll. </p>
             </div>
         </div><!-- End Breadcrumbs -->
 

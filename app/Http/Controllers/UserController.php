@@ -157,7 +157,7 @@ class UserController extends Controller
             $jenis_pajak = Pajak::count();
             $pbb = Pajak::where('jenis_pajak', 'pbb')->count();
             $hotel = Pajak::where('jenis_pajak', 'hotel')->count();
-            $bphtb = Pajak::where('jenis_pajak', 'bphtb')->count();
+            $bpthb = Pajak::where('jenis_pajak', 'bpthb')->count();
             $parkir = Pajak::where('jenis_pajak', 'parkir')->count();
             $hiburan = Pajak::where('jenis_pajak', 'hiburan')->count();
             $penerangan = Pajak::where('jenis_pajak', 'penerangan')->count();
@@ -167,7 +167,7 @@ class UserController extends Controller
                 'jenis_pajak' => $jenis_pajak,
                 'pbb' => $pbb,
                 'hotel' => $hotel,
-                'bphtb' => $bphtb,
+                'bpthb' => $bpthb,
                 'parkir' => $parkir,
                 'hiburan' => $hiburan,
                 'penerangan' => $penerangan,
