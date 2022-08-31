@@ -137,4 +137,30 @@ class UserController extends Controller
             return view('dashboard.pembayaran');
         }
     }
+
+    public function pembayaran_add(Request $request, $user_id)
+    {
+        $request->validate([
+            'perusahaan' => 'required',
+            'penanggung_jawab' => 'required',
+            'jenis_pajak' => 'required',
+            'pembayaran' => 'required'
+        ]);
+
+        $total_pembayaran = $request->pembayaran * ( 5 / 100 );
+
+        $pajak = new Pajak([
+            'user_id' => $user_id,
+            'perusahaan' => $request->perusahaan,
+            'penanggung_jawab' => $request->penanggung_jawab,
+            'jenis_pajak' => $request->jenis_pajak,
+            'pembayaran' => $request->pembayaran,
+            'total_pembayaran' => $total_pembayaran,
+        ]);
+        dd($pajak);
+        $pajak->save();
+
+        return redirect('dashboard')->with('success', 'Pembayaran telah terkirim, selanjutnya menunggu verifikasi dari admin!');
+    }
+    
 }

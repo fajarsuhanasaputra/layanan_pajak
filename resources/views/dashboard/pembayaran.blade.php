@@ -7,7 +7,7 @@
 </div>
 <div class="row">
     <div class="col-lg-6">
-    <form action="{{ route('register.action') }}" method="POST">
+    <form action="{{ url('pembayaran/'.Auth::user()->id) }}" method="POST">
         @csrf
         <div class="mb-3">
             <label>Nama Perusahaan <span class="text-danger">*</span></label>
@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
             <label>Jenis Pajak <span class="text-danger">*</span></label>
-            <select class="form-control">
+            <select name="jenis_pajak" class="form-control">
                 <option>Pilihan jenis pajak</option>
                 <option value="pbb">PBB (Pajak Bumi dan Bangunan)</option>
                 <option value="bphtb">BPHTB (Pungutan ata Perolehan Hak Atas Tanah atau Bangunan)</option>
@@ -32,7 +32,7 @@
         </div>
         <div class="mb-3">
             <label>Total Pembayaran<span class="text-danger">*</span></label>
-            <input class="form-control" type="number" name="total_pembarayan" />
+            <input class="form-control" type="number" name="pembayaran" />
         </div>
         <div style="margin-top: 20px;">
             <button class="btn btn-primary">Bayar</button>

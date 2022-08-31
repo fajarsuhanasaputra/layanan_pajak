@@ -11,6 +11,8 @@ class Pajak extends Model
         'perusahaan',
         'penanggung_jawab',
         'jenis_pajak',
+        'verifikasi',
+        'pembayaran',
         'total_pembayaran',
     ];
 }
