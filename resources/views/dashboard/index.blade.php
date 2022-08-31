@@ -56,7 +56,7 @@
                     BPHTB
                 </div>
                 <div class="panel-body">
-                    <h3 class="text-center">{{$bphtb}}</h3>
+                    <h3 class="h1 text-center">{{$bphtb}}</h3>
                     </p>
                 </div>
             </div>
