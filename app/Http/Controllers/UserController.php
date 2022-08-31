@@ -122,7 +122,7 @@ class UserController extends Controller
         {
             $pajaks = Pajak::find($user_id);
             
-            if(!$pajak)
+            if(!$pajaks)
             {
                 $pajaks = [];
             }

@@ -21,26 +21,29 @@
                             <th>Penanggung Jawab</th>
                             <th>Jenis Pajak</th>
                             <th>Total Pembayaran</th>
+                            <th>Status</th>
                             <th>Detail</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @if(count($pajaks) < 0)
+                        @if(count($pajaks) === 0)
                         <div class="alert alert-info" role="alert">
                         Belum ada riwayat pembayaran
                         </div>
-                        @elseif
-                            @foreach($pajaks as $pajak)
+                        @else
+                            @foreach ($pajaks as $key => $pajak)
                             <tr>
                                 <td>{{$pajak->perusahaan}}</td>
                                 <td>{{$pajak->penanggung_jawab}}</td>
                                 <td>{{$pajak->jenis_pajak}}</td>
                                 <td>{{$pajak->total_pembayaran}}</td>
+                                <td>{{$pajak->verifikasi}}</td>
                                 <td>
                                     <a href="#" class="btn btn-outline-secondary">detail</a>
                                 </td>
                             </tr>
                             @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>
