@@ -66,7 +66,7 @@
                             <a href="{{url('riwayat-pajak/'.Auth::user()->id)}}"><i class="fa fa-solid fa-book"></i> Riwayat Pajak</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-solid fa-credit-card"></i> Pembayaran</a>
+                            <a href="{{route('pembayaran')}}"><i class="fa fa-solid fa-credit-card"></i> Pembayaran</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->

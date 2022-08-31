@@ -129,4 +129,12 @@ class UserController extends Controller
             return view('dashboard.history_pajak', ['pajaks' => $pajaks]);
         }
     }
+
+    public function pembayaran()
+    {
+        if(Auth::check())
+        {
+            return view('dashboard.pembayaran');
+        }
+    }
 }

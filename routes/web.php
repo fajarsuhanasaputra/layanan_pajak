@@ -29,3 +29,4 @@ Route::get('profile/{user_id}', [UserController::class, 'profile'])->name('profi
 Route::put('profile/{user_id}', [UserController::class, 'profile_update'])->name('profile.update');
 
 Route::get('riwayat-pajak/{user_id}', [UserController::class, 'riwayat_pajak'])->name('riwayat');
+Route::get('pembayaran', [UserController::class, 'pembayaran'])->name('pembayaran');
