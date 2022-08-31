@@ -174,4 +174,13 @@ class UserController extends Controller
             return view('dashboard.detail_pembayaran');
         }
     }
+
+    public function manajemen_pembayaran()
+    {
+        if(Auth::check() && Auth::user()->role === "admin")
+        {
+            $pajaks = Pajak::paginate(1);
+            return view('dashboard.manajemen_pembayaran', ['pajaks' => $pajaks]);
+        }
+    }
 }

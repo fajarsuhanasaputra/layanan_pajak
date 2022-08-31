@@ -35,6 +35,7 @@
                     <li>
                         <a href="{{route('dashboard')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
+                    @if(Auth::user()->role === "user")
                     <li>
                         <a href="{{url('profile/'.Auth::user()->id)}}"><i class="fa fa-solid fa-user"></i> Profile</a>
                     </li>
@@ -44,6 +45,12 @@
                     <li>
                         <a href="{{route('pembayaran')}}"><i class="fa fa-solid fa-credit-card"></i> Pembayaran</a>
                     </li>
+                    @endif
+                    @if(Auth::user()->role === "admin")
+                    <li>
+                        <a href="{{route('manajemen_pembayaran')}}"><i class="fa fa-solid fa-credit-card"></i> Manajemen Pembayaran</a>
+                    </li>
+                    @endif
                 </ul>
                 <!-- /#side-menu -->
             </div>

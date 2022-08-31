@@ -45,3 +45,4 @@ Route::get('pembayaran', [UserController::class, 'pembayaran'])->name('pembayara
 Route::post('pembayaran/{user_id}', [UserController::class, 'pembayaran_add'])->name('pembayaran.add');
 
 Route::get('pajak/{pajak_id}', [UserController::class, 'detail_pembayaran'])->name('detail_pembayaran');
+Route::get('manajemen-pembayaran', [UserController::class, 'manajemen_pembayaran'])->name('manajemen_pembayaran');
