@@ -48,3 +48,5 @@ Route::get('pajak/{pajak_id}', [UserController::class, 'detail_pembayaran'])->na
 Route::get('manajemen-pembayaran', [UserController::class, 'manajemen_pembayaran'])->name('manajemen_pembayaran');
 Route::put('pajak/approved/{pajak_id}', [UserController::class, 'approved'])->name('pajak.approved');
 Route::put('pajak/rejected/{pajak_id}', [UserController::class, 'rejected'])->name('pajak.rejected');
+
+Route::get('view', [UserController::class, 'proof'])->name('proof');

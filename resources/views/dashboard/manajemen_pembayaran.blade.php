@@ -24,6 +24,7 @@
                             <th>Total Pembayaran</th>
                             <th>Tanggal Pembayaran</th>
                             <th>Status</th>
+                            <th>Bukti Pembayaran</th>
                             <th>Detail</th>
                         </tr>
                     </thead>
@@ -39,6 +40,9 @@
                                 <td>{{$pajak->created_at}}</td>
                                 <td>
                                     <button disabled class="btn btn-sm {{($pajak->status === 'checking') ? 'btn-primary' : (($pajak->status === 'approved') ? 'btn-success' : 'btn-danger')}}">{{$pajak->status}}</button>
+                                </td>
+                                <td>
+                                    <a class="btn btn-default" href="{{url('view?image_url='.$pajak->bukti_pembayaran)}}" class="btn btn-outline-secondary">Lihat</a>
                                 </td>
                                 @if($pajak->status === "checking")
                                 <td>

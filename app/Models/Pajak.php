@@ -13,6 +13,7 @@ class Pajak extends Model
         'penanggung_jawab',
         'jenis_pajak',
         'verifikasi',
+        'bukti_pembayaran',
         'pembayaran',
         'total_pembayaran',
     ];

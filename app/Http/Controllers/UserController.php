@@ -172,11 +172,15 @@ class UserController extends Controller
             'perusahaan' => 'required',
             'penanggung_jawab' => 'required',
             'jenis_pajak' => 'required',
-            'pembayaran' => 'required'
+            'pembayaran' => 'required',
+            'bukti_pembayaran' => 'required|image|mimes:jpg,png,jpeg',
         ]);
-
+        
+        
         $tambahan = $request->pembayaran * (5 / 100);
         $total_pembayaran = $request->pembayaran + $tambahan;
+        
+        $path = $request->bukti_pembayaran->store('proof');
 
         $pajak = Pajak::create([
             'perusahaan' => $request->perusahaan,
@@ -184,6 +188,7 @@ class UserController extends Controller
             'penanggung_jawab' => $request->penanggung_jawab,
             'jenis_pajak' => $request->jenis_pajak,
             'pembayaran' => $request->pembayaran,
+            'bukti_pembayaran' => $path,
             'total_pembayaran' => $total_pembayaran,
         ]);
 
@@ -223,5 +228,15 @@ class UserController extends Controller
         $pajak->update();
 
         return redirect('/dashboard')->with('success', 'Status pembayaran berhasil diubah!');
+    }
+
+    public function proof(Request $request)
+    {
+        if(Auth::check())
+        {
+            $image_url = $request->input('image_url');
+            
+            return view('dashboard.show_image', ['image_url' => $image_url]);
+        }
     }
 }
