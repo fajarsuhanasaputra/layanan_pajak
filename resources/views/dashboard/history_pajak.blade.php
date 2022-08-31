@@ -41,7 +41,7 @@
                                     <button disabled class="btn btn-sm {{($pajak->status === 'checking') ? 'btn-primary' : (($pajak->status === 'approved') ? 'btn-success' : 'btn-danger')}}">{{$pajak->status}}</button>
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-outline-secondary">detail</a>
+                                    <a href="{{url('pajak/'.$pajak->id)}}" class="btn btn-outline-secondary">detail</a>
                                 </td>
                             </tr>
                             @endforeach

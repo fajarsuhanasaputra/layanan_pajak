@@ -31,3 +31,5 @@ Route::put('profile/{user_id}', [UserController::class, 'profile_update'])->name
 Route::get('riwayat-pajak/{user_id}', [UserController::class, 'riwayat_pajak'])->name('riwayat');
 Route::get('pembayaran', [UserController::class, 'pembayaran'])->name('pembayaran');
 Route::post('pembayaran/{user_id}', [UserController::class, 'pembayaran_add'])->name('pembayaran.add');
+
+Route::get('pajak/{pajak_id}', [UserController::class, 'detail_pembayaran'])->name('detail_pembayaran');

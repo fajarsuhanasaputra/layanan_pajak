@@ -24,7 +24,6 @@ return new class extends Migration
             $table->integer('pembayaran')->nullable();
             $table->double('total_pembayaran')->nullable();
             $table->timestamps();
-            
         });
     }
 

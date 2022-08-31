@@ -144,7 +144,7 @@ class UserController extends Controller
 
         $tambahan = $request->pembayaran * ( 5 / 100 );
         $total_pembayaran = $request->pembayaran + $tambahan;
-        
+
         $pajak = Pajak::create([
             'perusahaan' => $request->perusahaan,
             'user_id' => $user_id,
@@ -155,6 +155,14 @@ class UserController extends Controller
         ]);
 
         return redirect('dashboard')->with('success', 'Pembayaran telah terkirim, selanjutnya menunggu verifikasi dari admin!');
+    }
+
+    public function detail_pembayaran($pajak_id)
+    {
+        if(Auth::check())
+        {
+            return view('dashboard.detail_pembayaran');
+        }
     }
     
 }
