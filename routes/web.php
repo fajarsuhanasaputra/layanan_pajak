@@ -35,3 +35,7 @@ Route::post('pembayaran/{user_id}', [UserController::class, 'pembayaran_add'])->
 //dashboard view
 Route::get('dashboard', [UserController::class, 'dashboardView'])->name('dashboard');
 
+//landing page about
+Route::get('about', function () {
+    return view('about', ['title' => 'tentang']);
+})->name('home');
