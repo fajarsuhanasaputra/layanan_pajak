@@ -25,20 +25,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="odd gradeX">
-                            <td>Trident</td>
-                            <td>Internet Explorer 4.0</td>
-                            <td>Win 95+</td>
-                            <td class="center">4</td>
-                            <td class="center">X</td>
-                        </tr>
-                        <tr class="even gradeC">
-                            <td>Trident</td>
-                            <td>Internet Explorer 5.0</td>
-                            <td>Win 95+</td>
-                            <td class="center">5</td>
-                            <td class="center">C</td>
-                        </tr>
+                        @if(count($pajaks) < 0)
+                        <div class="alert alert-info" role="alert">
+                        Belum ada riwayat pembayaran
+                        </div>
+                        @elseif
+                            @foreach($pajaks as $pajak)
+                            <tr>
+                                <td>{{$pajak->perusahaan}}</td>
+                                <td>{{$pajak->penanggung_jawab}}</td>
+                                <td>{{$pajak->jenis_pajak}}</td>
+                                <td>{{$pajak->total_pembayaran}}</td>
+                                <td>
+                                    <a href="#" class="btn btn-outline-secondary">detail</a>
+                                </td>
+                            </tr>
+                            @endforeach
                     </tbody>
                 </table>
             </div>

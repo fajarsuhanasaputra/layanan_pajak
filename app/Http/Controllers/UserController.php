@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Pajak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -115,11 +116,17 @@ class UserController extends Controller
         return back()->with('fail', 'Profil gagal diperbaharui!');
     }
 
-    public function riwayat_pajak()
+    public function riwayat_pajak($user_id)
     {
         if(Auth::check())
         {
-            return view('dashboard.history_pajak');
+            $pajaks = Pajak::find($user_id);
+            
+            if(!$pajak)
+            {
+                $pajaks = [];
+            }
+            return view('dashboard.history_pajak', ['pajaks' => $pajaks]);
         }
     }
 }
