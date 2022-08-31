@@ -120,12 +120,7 @@ class UserController extends Controller
     {
         if(Auth::check())
         {
-            $pajaks = Pajak::find($user_id);
-            
-            if(!$pajaks)
-            {
-                $pajaks = [];
-            }
+            $pajaks = Pajak::where('user_id', '=', $user_id)->get();
             return view('dashboard.history_pajak', ['pajaks' => $pajaks]);
         }
     }
@@ -147,18 +142,17 @@ class UserController extends Controller
             'pembayaran' => 'required'
         ]);
 
-        $total_pembayaran = $request->pembayaran * ( 5 / 100 );
-
-        $pajak = new Pajak([
-            'user_id' => $user_id,
+        $tambahan = $request->pembayaran * ( 5 / 100 );
+        $total_pembayaran = $request->pembayaran + $tambahan;
+        
+        $pajak = Pajak::create([
             'perusahaan' => $request->perusahaan,
+            'user_id' => $user_id,
             'penanggung_jawab' => $request->penanggung_jawab,
             'jenis_pajak' => $request->jenis_pajak,
             'pembayaran' => $request->pembayaran,
             'total_pembayaran' => $total_pembayaran,
         ]);
-        dd($pajak);
-        $pajak->save();
 
         return redirect('dashboard')->with('success', 'Pembayaran telah terkirim, selanjutnya menunggu verifikasi dari admin!');
     }

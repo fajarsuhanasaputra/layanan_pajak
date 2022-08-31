@@ -23,11 +23,11 @@
                 <option>Pilihan jenis pajak</option>
                 <option value="pbb">PBB (Pajak Bumi dan Bangunan)</option>
                 <option value="bphtb">BPHTB (Pungutan ata Perolehan Hak Atas Tanah atau Bangunan)</option>
-                <option value="pajak_hiburan">Pajak Hiburan</option>
-                <option value="pajak_penerangan">Pajak Penerangan</option>
-                <option value="pajak_hotel">Pajak Hotel</option>
-                <option value="pajak_restoran">Pajak Restoran</option>
-                <option value="pajak_parkir">Pajak Parkir</option>
+                <option value="hiburan">Pajak Hiburan</option>
+                <option value="penerangan">Pajak Penerangan</option>
+                <option value="hotel">Pajak Hotel</option>
+                <option value="restoran">Pajak Restoran</option>
+                <option value="parkir">Pajak Parkir</option>
             </select>
         </div>
         <div class="mb-3">

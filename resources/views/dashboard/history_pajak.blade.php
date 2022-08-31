@@ -20,29 +20,35 @@
                             <th>Nama Perusahaan</th>
                             <th>Penanggung Jawab</th>
                             <th>Jenis Pajak</th>
+                            <th>Pembayaran</th>
                             <th>Total Pembayaran</th>
+                            <th>Tanggal Pembayaran</th>
                             <th>Status</th>
                             <th>Detail</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @if(count($pajaks) === 0)
-                        <div class="alert alert-info" role="alert">
-                        Belum ada riwayat pembayaran
-                        </div>
-                        @else
+                        @if($pajaks && count($pajaks) > 0)
                             @foreach ($pajaks as $key => $pajak)
                             <tr>
                                 <td>{{$pajak->perusahaan}}</td>
                                 <td>{{$pajak->penanggung_jawab}}</td>
-                                <td>{{$pajak->jenis_pajak}}</td>
-                                <td>{{$pajak->total_pembayaran}}</td>
-                                <td>{{$pajak->verifikasi}}</td>
+                                <td>{{strtoupper($pajak->jenis_pajak)}}</td>
+                                <td>Rp. {{$pajak->pembayaran}}</td>
+                                <td>Rp. {{$pajak->total_pembayaran}}</td>
+                                <td>{{$pajak->created_at}}</td>
+                                <td>
+                                    <button disabled class="btn btn-sm {{($pajak->status === 'checking') ? 'btn-primary' : (($pajak->status === 'approved') ? 'btn-success' : 'btn-danger')}}">{{$pajak->status}}</button>
+                                </td>
                                 <td>
                                     <a href="#" class="btn btn-outline-secondary">detail</a>
                                 </td>
                             </tr>
                             @endforeach
+                        @else
+                            <div class="alert alert-info" role="alert">
+                            Belum ada riwayat pembayaran
+                            </div>
                         @endif
                     </tbody>
                 </table>

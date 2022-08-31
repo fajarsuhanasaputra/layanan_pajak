@@ -9,6 +9,7 @@ class Pajak extends Model
 {
     protected $fillable = [
         'perusahaan',
+        'user_id',
         'penanggung_jawab',
         'jenis_pajak',
         'verifikasi',
