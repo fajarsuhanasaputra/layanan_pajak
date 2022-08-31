@@ -1,11 +1,11 @@
 <?php
-
+  
 namespace Database\Seeders;
-
+  
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
-
+use App\Models\User;
+  
 class AdminUserSeeder extends Seeder
 {
     /**
@@ -16,10 +16,10 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         User::create([
-        'name' => 'Admin',
-        'role' => 'admin',
-        'username' => 'admin',
-        'password' => Hash::make('12345'),
+            'name' => 'Admin',
+            'role' => 'admin',
+            'username' => 'admin',
+            'password' => bcrypt('123456'),
         ]);
     }
 }
