@@ -39,7 +39,7 @@ class UserController extends Controller
         $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
-                        ->withSuccess('Logged-in');
+                ->withSuccess('Logged-in');
         }
 
         return back()->withErrors([
@@ -76,18 +76,33 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        if(Auth::check())
-        {
-            return view('dashboard.index');
-        }
+        if (Auth::check()) {
+            $jenis_pajak = Pajak::count();
+            $pbb = Pajak::where('jenis_pajak', 'pbb')->count();
+            $hotel = Pajak::where('jenis_pajak', 'hotel')->count();
+            $bpthb = Pajak::where('jenis_pajak', 'bpthb')->count();
+            $parkir = Pajak::where('jenis_pajak', 'parkir')->count();
+            $hiburan = Pajak::where('jenis_pajak', 'hiburan')->count();
+            $penerangan = Pajak::where('jenis_pajak', 'penerangan')->count();
+            $restoran = Pajak::where('jenis_pajak', 'restoran')->count();
 
-        return redirect("/")->withSuccess('Access is not permitted');
+            return view('dashboard.index', [
+                'jenis_pajak' => $jenis_pajak,
+                'pbb' => $pbb,
+                'hotel' => $hotel,
+                'bpthb' => $bpthb,
+                'parkir' => $parkir,
+                'hiburan' => $hiburan,
+                'penerangan' => $penerangan,
+                'restoran' => $restoran,
+            ]);
+        }
+        return redirect("login")->withSuccess('Access is not permitted');
     }
 
     public function profile(Request $request, $user_id)
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $user = User::find($user_id);
             return view('dashboard.profile', ['user' => $user]);
         }
@@ -98,15 +113,12 @@ class UserController extends Controller
     public function profile_update(Request $request, $user_id)
     {
         $user = User::find($user_id);
-        if($user)
-        {
-            if($request->input('name'))
-            {
+        if ($user) {
+            if ($request->input('name')) {
                 $user->name = $request->input('name');
             }
-    
-            if($request->input('username'))
-            {
+
+            if ($request->input('username')) {
                 $user->username = $request->input('username');
             }
             $user->save();
@@ -118,8 +130,7 @@ class UserController extends Controller
 
     public function riwayat_pajak($user_id)
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $pajaks = Pajak::where('user_id', '=', $user_id)->get();
             return view('dashboard.history_pajak', ['pajaks' => $pajaks]);
         }
@@ -127,8 +138,7 @@ class UserController extends Controller
 
     public function pembayaran()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             return view('dashboard.pembayaran');
         }
     }
@@ -142,7 +152,7 @@ class UserController extends Controller
             'pembayaran' => 'required'
         ]);
 
-        $tambahan = $request->pembayaran * ( 5 / 100 );
+        $tambahan = $request->pembayaran * (5 / 100);
         $total_pembayaran = $request->pembayaran + $tambahan;
 
         $pajak = Pajak::create([
@@ -164,5 +174,4 @@ class UserController extends Controller
             return view('dashboard.detail_pembayaran');
         }
     }
-    
 }

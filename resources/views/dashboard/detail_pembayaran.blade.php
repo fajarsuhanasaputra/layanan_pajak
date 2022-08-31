@@ -6,6 +6,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                 <a type="button" class="btn btn-default" href="/dashboard"><i class="fa fa-solid fa-chevron-left"></i> Kembali</a>
+                <button type="button" onclick="window.print();" href="/counts" class="btn btn-primary mb-4 px-4">
+                    Print
+                </button>
                 </div>
                 <div class="panel-body">
                     <h2 class="text-center"><strong>LAYANAN PAJAK KOTA BANDUNG</strong></h2>

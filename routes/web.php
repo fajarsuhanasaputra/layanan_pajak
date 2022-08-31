@@ -14,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+Route bagian landing page 
+*/
 Route::get('/', function () {
     return view('app', ['title' => 'Layanan Pajak']);
 })->name('home');
+Route::get('about', function () {
+    return view('about', ['title' => 'tentang']);
+})->name('about');
+Route::get('layanan', function () {
+    return view('layanan', ['title' => 'layanan']);
+})->name('layanan');
+Route::get('contact', function () {
+    return view('contact', ['title' => 'contact']);
+})->name('contact');
 
 Route::post('register', [UserController::class, 'register_action'])->name('register.action');
 Route::post('login', [UserController::class, 'login_action'])->name('login.action');

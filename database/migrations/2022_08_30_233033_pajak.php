@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('perusahaan')->nullable();
             $table->enum('status', ['checking', 'rejected', 'approved'])->default('checking');
             $table->string('penanggung_jawab')->nullable();
-            $table->enum('jenis_pajak', ['pbb','hotel','bphtb','parkir','hiburan','penerangan','restoran'])->nullable();
+            $table->enum('jenis_pajak', ['pbb', 'hotel', 'bpthb', 'parkir', 'hiburan', 'penerangan', 'restoran'])->nullable();
             $table->integer('pembayaran')->nullable();
             $table->double('total_pembayaran')->nullable();
             $table->timestamps();
