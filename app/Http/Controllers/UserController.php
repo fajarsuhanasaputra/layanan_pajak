@@ -76,7 +76,7 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->role === "admin") {
             $jenis_pajak = Pajak::count();
             $pbb = Pajak::where('jenis_pajak', 'pbb')->count();
             $hotel = Pajak::where('jenis_pajak', 'hotel')->count();
@@ -85,6 +85,29 @@ class UserController extends Controller
             $hiburan = Pajak::where('jenis_pajak', 'hiburan')->count();
             $penerangan = Pajak::where('jenis_pajak', 'penerangan')->count();
             $restoran = Pajak::where('jenis_pajak', 'restoran')->count();
+
+            return view('dashboard.index', [
+                'jenis_pajak' => $jenis_pajak,
+                'pbb' => $pbb,
+                'hotel' => $hotel,
+                'bpthb' => $bpthb,
+                'parkir' => $parkir,
+                'hiburan' => $hiburan,
+                'penerangan' => $penerangan,
+                'restoran' => $restoran,
+            ]);
+        }
+
+        if (Auth::check() && Auth::user()->role === "user") {
+            $user_id = Auth::user()->id;
+            $jenis_pajak = Pajak::where('user_id', $user_id)->count();
+            $pbb = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'pbb')->count();
+            $hotel = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'hotel')->count();
+            $bpthb = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'bpthb')->count();
+            $parkir = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'parkir')->count();
+            $hiburan = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'hiburan')->count();
+            $penerangan = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'penerangan')->count();
+            $restoran = Pajak::where('user_id', $user_id)->where('jenis_pajak', 'restoran')->count();
 
             return view('dashboard.index', [
                 'jenis_pajak' => $jenis_pajak,
@@ -179,8 +202,26 @@ class UserController extends Controller
     {
         if(Auth::check() && Auth::user()->role === "admin")
         {
-            $pajaks = Pajak::paginate(1);
+            $pajaks = Pajak::paginate(10);
             return view('dashboard.manajemen_pembayaran', ['pajaks' => $pajaks]);
         }
+    }
+
+    public function approved($pajak_id)
+    {
+        $pajak = Pajak::find($pajak_id);
+        $pajak->status = "approved";
+        $pajak->update();
+
+        return redirect('/dashboard')->with('success', 'Status pembayaran berhasil diubah!');
+    }
+
+    public function rejected($pajak_id)
+    {
+        $pajak = Pajak::find($pajak_id);
+        $pajak->status = "rejected";
+        $pajak->update();
+
+        return redirect('/dashboard')->with('success', 'Status pembayaran berhasil diubah!');
     }
 }

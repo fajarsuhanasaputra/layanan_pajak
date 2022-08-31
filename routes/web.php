@@ -46,3 +46,5 @@ Route::post('pembayaran/{user_id}', [UserController::class, 'pembayaran_add'])->
 
 Route::get('pajak/{pajak_id}', [UserController::class, 'detail_pembayaran'])->name('detail_pembayaran');
 Route::get('manajemen-pembayaran', [UserController::class, 'manajemen_pembayaran'])->name('manajemen_pembayaran');
+Route::put('pajak/approved/{pajak_id}', [UserController::class, 'approved'])->name('pajak.approved');
+Route::put('pajak/rejected/{pajak_id}', [UserController::class, 'rejected'])->name('pajak.rejected');

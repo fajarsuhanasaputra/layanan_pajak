@@ -40,9 +40,20 @@
                                 <td>
                                     <button disabled class="btn btn-sm {{($pajak->status === 'checking') ? 'btn-primary' : (($pajak->status === 'approved') ? 'btn-success' : 'btn-danger')}}">{{$pajak->status}}</button>
                                 </td>
+                                @if($pajak->status === "checking")
                                 <td>
-                                    <a href="{{url('pajak/'.$pajak->id)}}" class="btn btn-outline-secondary">detail</a>
+                                    <form action="{{url('pajak/approved/'.$pajak->id)}}" method="POST">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="btn btn-success">Approve</button>
+                                    </form>
+                                    <form action="{{url('pajak/rejected/'.$pajak->id)}}" method="POST">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="btn btn-danger">Rejected</button>
+                                    </form>
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
                         @else
