@@ -99,7 +99,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>BPPD,<br>Layanan Pajak</h1>
+      <h1>BAPENDA,<br>Layanan Pajak</h1>
       <h2>Kota Bandung</h2>
       @if(!Auth::check())
       <a class="btn-get-started" data-bs-toggle="modal" data-bs-target="#login">Bayar Sekarang !!!</a>

@@ -33,8 +33,8 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="active" href="/">Beranda</a></li>
-                    <li><a href="/about">Tentang</a></li>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a class="active" href="/about">Tentang</a></li>
                     <li><a href="#">Layanan</a></li>
                     <li><a href="#">Kontak</a></li>
                 </ul>
@@ -102,7 +102,7 @@
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
                 <h2>Tentang Kami</h2>
-                <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                <p>Sektor pajak daerah merupakan sumber pendapatan utama bagi Pemerintah Kota Bandung, dengan memberikan kontribusi sepertiga dari total pendapatan daerah. Ini merupakan tugas utama dari dibentuknya Badan Pendapatan Daerah, berharap adanya peningkatan kesadaran dan kepatuhan wajib pajak dalam membayar pajak daerah serta meningkatnya pengawasan atas pelaksanaan sistem perpajakan di Kota Bandung. </p>
             </div>
         </div><!-- End Breadcrumbs -->
 
@@ -111,7 +111,7 @@
 
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="assets/landing/img/hero-bg.jpg" class="img-fluid" alt="">
+                        <img src="assets/landing/img/bdg.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3>VISI & MISI.</h3>
