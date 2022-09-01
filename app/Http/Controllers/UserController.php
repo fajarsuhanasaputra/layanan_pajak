@@ -199,7 +199,8 @@ class UserController extends Controller
     {
         if(Auth::check())
         {
-            return view('dashboard.detail_pembayaran');
+            $pajak = Pajak::find($pajak_id);
+            return view('dashboard.detail_pembayaran', ['pajak' => $pajak]);
         }
     }
 
