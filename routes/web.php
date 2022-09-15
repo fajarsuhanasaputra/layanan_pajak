@@ -48,5 +48,6 @@ Route::get('pajak/{pajak_id}', [UserController::class, 'detail_pembayaran'])->na
 Route::get('manajemen-pembayaran', [UserController::class, 'manajemen_pembayaran'])->name('manajemen_pembayaran');
 Route::put('pajak/approved/{pajak_id}', [UserController::class, 'approved'])->name('pajak.approved');
 Route::put('pajak/rejected/{pajak_id}', [UserController::class, 'rejected'])->name('pajak.rejected');
-
+//delete data pajaks
+Route::delete('pajak/{pajak_id}', [UserController::class, 'delete'])->name('pajak.delete');
 Route::get('view', [UserController::class, 'proof'])->name('proof');

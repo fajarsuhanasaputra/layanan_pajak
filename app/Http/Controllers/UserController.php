@@ -144,6 +144,7 @@ class UserController extends Controller
             if ($request->input('username')) {
                 $user->username = $request->input('username');
             }
+            
             $user->save();
             return redirect('dashboard')->with('success', 'Profil berhasil diperbaharui!');
         }
@@ -230,7 +231,14 @@ class UserController extends Controller
 
         return redirect('/dashboard')->with('success', 'Status pembayaran berhasil diubah!');
     }
+// delete data
+    public function delete($pajak_id)
+    {
+        $pajak = Pajak::find($pajak_id);
+        $pajak->delete();
 
+        return redirect('/dashboard')->with('success', 'Data berhasil dihapus!');
+    }
     public function proof(Request $request)
     {
         if(Auth::check())
