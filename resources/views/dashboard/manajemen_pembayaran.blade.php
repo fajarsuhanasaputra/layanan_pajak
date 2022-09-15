@@ -42,6 +42,7 @@
                                     <button disabled class="btn btn-sm {{($pajak->status === 'checking') ? 'btn-primary' : (($pajak->status === 'approved') ? 'btn-success' : 'btn-danger')}}">{{$pajak->status}}</button>
                                 </td>
                                 <td>
+                                <a class="btn btn-sm btn-info" href="{{url('pajak/'.$pajak->id)}}" class="btn btn-outline-secondary">Detail</a>
                                     <a class="btn btn-default" href="{{url('view?image_url='.$pajak->bukti_pembayaran)}}" class="btn btn-outline-secondary">Lihat</a>
                                 </td>
                                 @if($pajak->status === "checking")
